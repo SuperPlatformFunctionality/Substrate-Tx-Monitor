@@ -1,5 +1,4 @@
 'use strict';
-import RabbitMqConsumer from "../rabbitmq/rabbitmq_consumer.js"
 import rabbitmqPublisher from "../rabbitmq/rabbitmq_publisher";
 import myUtils from "../utils/MyUtils.js";
 import config from '../config/index.js';
@@ -107,8 +106,8 @@ let polkadotMonitorService = new PolkadotMonitorService();
 export default polkadotMonitorService;
 
 
-//
-let recentRecordBlkNoBackupFile = path.join(__dirname, "recent_record_block_number_backup_file.txt");
+let projectRootPath = require.main.path;
+let recentRecordBlkNoBackupFile = path.join(projectRootPath, "recent_record_block_number_backup_file.txt");
 let readRecentRecordBlkNoFromBackupFile = function() {
 	let contStr = fs.existsSync(recentRecordBlkNoBackupFile) ? fs.readFileSync(recentRecordBlkNoBackupFile).toString() : "0";
 	let ret = parseInt(contStr);

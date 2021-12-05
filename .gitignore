@@ -11,5 +11,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+recent_record_block_number_backup_file.txt
+
 .idea
 

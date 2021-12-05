@@ -43,7 +43,7 @@ async function initConsumer() {
 	}
 }
 
-//initConsumer();
+initConsumer();
 
 let RabbitMqConsumer = {
 	addListener
