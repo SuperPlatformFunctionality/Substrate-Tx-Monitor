@@ -22,12 +22,6 @@ async function initConsumer() {
 			console.error('Broker error', err, vhost, connectionUrl);
 		});
 
-		// Publish a message
-		/*
-		const publication = await broker.publish('demo_publication', 'Hello World!');
-		publication.on('error', console.error);
-		*/
-
 		// Consume a message
 		const subscription = await broker.subscribe('tx_monitor_sub');
 		subscription.on('message', async function(message, content, ackOrNack) { //可以使用async函数,研究下rascal库里面怎么调用这个的,为什么可以支持async函数,里面await了吗?
