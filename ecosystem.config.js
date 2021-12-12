@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'polkadot-tx-monitor',
+    name: 'substrate-tx-monitor',
     script: 'main.js',
     instances: 1 ,
     autorestart: true,

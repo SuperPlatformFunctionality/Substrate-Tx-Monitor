@@ -1,5 +1,5 @@
 {
-  "name": "polkadot-tx-monitor",
+  "name": "substrate-tx-monitor",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
